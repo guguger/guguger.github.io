@@ -14,10 +14,10 @@
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: '123',                   /* Unique identifier of Mobile/Web record of Portal Tenant Management   */
         clientId: 'WebChat',            /* no need to change this */
-        apiUrl: '/clientweb/api/v1',    /* path to public API can be absolute like http://example.brightpattern.com:98/clientweb/api/v1 or relative*/
+        apiUrl: 'https://olga-centos-vm.bugfocus.com/clientweb/api/v1',    /* path to public API can be absolute like http://example.brightpattern.com:98/clientweb/api/v1 or relative*/
         tenantUrl: 'example.com',
         width: 300,                     /* chat width */
-        chatPath: '/clientweb/chat-client-v4/',                    /* relative path to client-chat-page.html i.e empty here because snippet-page.html and client-chat-page.html in same directory */
+        chatPath: 'https://olga-centos-vm.bugfocus.com/clientweb/chat-client-v4/',                    /* relative path to client-chat-page.html i.e empty here because snippet-page.html and client-chat-page.html in same directory */
         callback:false,
        
         sound_notification: true,
@@ -41,6 +41,6 @@
 
     };
 </script>
-<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="https://olga-centos-vm.bugfocus.com/clientweb/chat-client-v4/js/init.js"></script>
 </body>
 </html>
