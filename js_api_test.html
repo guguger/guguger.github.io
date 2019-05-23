@@ -6,7 +6,7 @@
 <script type="text/javascript" src="https://olga-540.bugfocus.com/agentdesktop/libs/servicepatternapi-dev.js"></script>
 </head>
 <body>
-Test *********************************************
+++++++  Test +++++++++++++++++++++++++++++++++++++
 <!-- Place this file into the folder ...ServicePattern\Web\webapps\agentdesktop, 
 use URL https://<host_name>/agentdesktop/TestB.html in Web Screen Pop block 
 or guguger.github.io/js_api_test.html
@@ -17,14 +17,14 @@ or guguger.github.io/js_api_test.html
 <!--Agent Status Methods *********************************************
 <form>	
 	<p><button type "button" onclick="window.bpspat.api.setStatus('Not Ready','Lunch')"> Set Agent status with reason code as  Lunch </button> <!-- missing in external docs </form>-->
-Dialing, transfers+++++++++++++++++++++++++++++++++++++++
+++++++  Dialing, transfers   +++++++++++++++++++++++++++++++++++++++
 	<form>	
 	<p><button type="button" onclick="window.bpspat.api.dialNumber('8800555555')">Dial 8800555555</button>
 	<p><button type "button" onclick="window.bpspat.api.selectService('Simple Call')"> Select Service 'Simple Call' </button> 
 	<p><button type="button" onclick="window.bpspat.api.singleStepTransfer(8800555555)">Single Step Transfer </button>
 	<p><button type="button" onclick="window.bpspat.api.singleStepConference(8800555555)">Single Step Conference </button>
 </form>
-Completing Interaction+++++++++++++++++++++++++++++++
+++++++ Completing Interaction   +++++++++++++++++++++++++++++++
 <form>
        <p><button type="button" onclick="window.bpspat.api.setNotes('Test Notes 12345')">Set Notes</button>
 	<p><button type="button" onclick="window.bpspat.api.setDisposition('1235468')">Set Disposition as Product sold by Code 100 (code added to disposition on service)</button>
@@ -39,7 +39,7 @@ Completing Interaction+++++++++++++++++++++++++++++++
 	<p><button type="button" onclick="window.bpspat.api.postVariable(name,value)">Post Variable (Set Variable block is included into scenario) </button>
 	<p><button type="button" onclick="window.bpspat.api.terminateInteraction()">Terminate Interaction (releases the communication channel of the current interaction</button>
 </form>
-Call recordings control+++++++++++++++++++++++++++++++++
+++++++ Call recordings control+++++++++++++++++++++++++++++++++
 <form>
 	<p><button type="button" onclick="window.bpspat.api.getCallRecordingStatus(callback)">Get Call Recording Status</button>
 	<p><button type="button" onclick="window.bpspat.api.muteCallRecording(callback)">Mute Call Recording</button>	
