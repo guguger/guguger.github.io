@@ -13,13 +13,13 @@ or guguger.github.io/js_api_test.html
 -->
 <form>
 	<p><button type="button" onclick="testAlert()">Test Script support</button>
-	<p><button type="button" onclick="window.bpspat.api.dialNumber(8800555555)">Dial 8800555555</button>
+	<p><button type="button" onclick="window.bpspat.api.dialNumber('8800555555')">Dial 8800555555</button>
 	<p><button type="button" onclick="window.bpspat.api.startCallRecording()">Start Recording</button>
 	<p><button type="button" onclick="window.bpspat.api.muteCallRecording()">Mute Recording</button>	
 	<p><button type="button" onclick="window.bpspat.api.stopCallRecording()">Stop Recording</button>
 	<p><button type="button" onclick="window.bpspat.api.unmuteCallRecording()">Unmute Recording</button>	
 	<p><button type="button" onclick="window.bpspat.api.setNotes('Test Notes 12345')">Set Notes</button>
-	<p><button type="button" onclick="window.bpspat.api.setDisposition(100)">Set Disposition as Product sold by Code 100 (code added to disposition on service)</button>
+	<p><button type="button" onclick="window.bpspat.api.setDisposition('100')">Set Disposition as Product sold by Code 100 (code added to disposition on service)</button>
 	<p><button type="button" onclick="window.bpspat.api.setDispositionByName('Product sold')">Set Disposition as Product sold by Name</button>
 	<p><button type="button" onclick="window.bpspat.api.completeInteraction()">Complete</button>
 	<p><button type="button" onclick="window.bpspat.api.completeInteractionWithDisp(100, 'Test Notes 12345')">Set Disposition 'Product sold' bu Code and Notes, Complete</button>
