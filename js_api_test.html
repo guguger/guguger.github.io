@@ -14,44 +14,55 @@ or guguger.github.io/js_api_test.html
 <form>
 	<p><button type="button" onclick="testAlert()">Test Script support</button>
 </form>
-Agent Status Methods *********************************************
+<!--Agent Status Methods *********************************************
 <form>	
-	<p><button type "button" onclick="window.bpspat.api.setStatus('Not Ready', 'Lunch')"> Set Agent status with reason code as  Lunch </button> <!-- missing in external docs -->
-</form>
-
-<form>	
+	<p><button type "button" onclick="window.bpspat.api.setStatus('Not Ready','Lunch')"> Set Agent status with reason code as  Lunch </button> <!-- missing in external docs </form>-->
+Dialing, transfers+++++++++++++++++++++++++++++++++++++++
+	<form>	
 	<p><button type="button" onclick="window.bpspat.api.dialNumber('8800555555')">Dial 8800555555</button>
-	
 	<p><button type "button" onclick="window.bpspat.api.selectService('Simple Call')"> Select Service 'Simple Call' </button> 
-	<p><button type="button" onclick="window.bpspat.api.startCallRecording()">Start Recording</button>
-	<p><button type="button" onclick="window.bpspat.api.muteCallRecording()">Mute Recording</button>	
-	<p><button type="button" onclick="window.bpspat.api.stopCallRecording()">Stop Recording</button>
-	<p><button type="button" onclick="window.bpspat.api.unmuteCallRecording()">Unmute Recording</button>	
-	<p><button type="button" onclick="window.bpspat.api.setNotes('Test Notes 12345')">Set Notes</button>
+	<p><button type="button" onclick="window.bpspat.api.singleStepTransfer(8800555555)">Single Step Transfer </button>
+	<p><button type="button" onclick="window.bpspat.api.singleStepConference(8800555555)">Single Step Conference </button>
+</form>
+Completing Interaction+++++++++++++++++++++++++++++++
+<form>
+       <p><button type="button" onclick="window.bpspat.api.setNotes('Test Notes 12345')">Set Notes</button>
 	<p><button type="button" onclick="window.bpspat.api.setDisposition('1235468')">Set Disposition as Product sold by Code 100 (code added to disposition on service)</button>
 	<p><button type="button" onclick="window.bpspat.api.setDispositionByName('Product sold')">Set Disposition as Product sold by Name</button>
 	<p><button type="button" onclick="window.bpspat.api.completeInteraction()">Complete</button>
 	<p><button type="button" onclick="window.bpspat.api.completeInteractionWithDisp(1235468, 'Test Notes 12345')">Set Disposition 'Product sold' by Code and Notes, Complete</button>
-	<p><button type="button" onclick="window.bpspat.api.stopScreenRecording()">Stop Screen Recording</button>
-	<p><button type="button" onclick="window.bpspat.api.pauseScreenRecording()">Pause Screen Recording</button>
-	<p><button type="button" onclick="window.bpspat.api.resumeScreenRecording()">Resume Screen Recording</button>
-       <p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Cat')">Set Reporting Custom Field#1 as Cat</button>	
+      <p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Cat')">Set Reporting Custom Field#1 as Cat</button>	
 	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Dog')">Set Reporting Custom Field#1 as Dog</button>	
 	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Bird')">Set Reporting Custom Field#1 as Bird</button>	
 	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#2', 'Cat')">Set Reporting Custom Field#2 as Cat</button>	
 	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#2', 'Dog')">Set Reporting Custom Field#2 as Dog </button>
-	<p><button type="button" onclick="window.bpspat.api.singleStepTransfer(8800555555)">Single Step Transfer </button>
-	<p><button type="button" onclick="window.bpspat.api.singleStepConference(8800555555)">Single Step Conference </button>
 	<p><button type="button" onclick="window.bpspat.api.postVariable(name,value)">Post Variable (Set Variable block is included into scenario) </button>
-	<p><button type="button" onclick="window.bpspat.api.terminateInteraction()">Terminate Interaction (releases the communication channel of the current interaction)</button>
-    <!-- bug #12228    <p><button type="button" onclick="window.bpspat.api.getFormValue('name1')">Custom Field1</button>
-        <p><button type="button" onclick="window.bpspat.api.setFormValue('name1', 'JScript')">Custom Field2</button>	-->
+	<p><button type="button" onclick="window.bpspat.api.terminateInteraction()">Terminate Interaction (releases the communication channel of the current interaction
 </form>
+Call recordings control+++++++++++++++++++++++++++++++++
+<form>
+	<p><button type="button" onclick="window.bpspat.api.getCallRecordingStatus(callback)">Get Call Recording Status</button>
+	<p><button type="button" onclick="window.bpspat.api.muteCallRecording(callback)">Mute Call Recording</button>	
+	<p><button type="button" onclick="window.bpspat.api.unmuteCallRecording(callback)">Unmute Call Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.startCallRecording(callback)">Start Call Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.stopCallRecording(callback)">Stop Call Recording</button>		
+ 	<p><button type="button" onclick="window.bpspat.api.getScreenRecordingStatus(callback)">Get Screen Recording Status</button>
+	<p><button type="button" onclick="window.bpspat.api.stopScreenRecording(callback)">Stop Screen Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.pauseScreenRecording(callback)">Pause Screen Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.resumeScreenRecording(callback)">Resume Screen Recording</button>
+</form>
+
+
 **************************************************
 <script>
 function testAlert() {
 a = 'Test OK! Script is supported!';
 alert(a);
+}
+callback = function(data) {
+data.recording = 1/0;
+data.muted = 1/0;
+data.paused = 1/0;
 }
 </script>
 </body>
