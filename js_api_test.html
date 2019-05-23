@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head profile="http://gmpg.org/xfn/11">
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="https://olga-540.bugfocus.com/agentdesktop/libs/servicepatternapi-dev.js"></script>
+</head>
+<body>
+Test *********************************************
+<!-- Place this file into the folder ...ServicePattern\Web\webapps\agentdesktop, 
+use URL https://<host_name>/agentdesktop/TestB.html in Web Screen Pop block 
+or guguger.github.io/js_api_test.html
+-->
+<form>
+	<p><button type="button" onclick="testAlert()">Test Script support</button>
+	<p><button type="button" onclick="window.bpspat.api.dialNumber(3003)">Dial 3003</button>
+	<p><button type="button" onclick="window.bpspat.api.startCallRecording()">Start Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.muteCallRecording()">Mute Recording</button>	
+	<p><button type="button" onclick="window.bpspat.api.stopCallRecording()">Stop Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.unmuteCallRecording()">Unmute Recording</button>	
+	<p><button type="button" onclick="window.bpspat.api.setNotes('Test Notes 12345')">Set Notes</button>
+	<p><button type="button" onclick="window.bpspat.api.setDisposition('100')">Set Disposition 100</button>
+	<p><button type="button" onclick="window.bpspat.api.completeInteraction()">Complete</button>
+	<p><button type="button" onclick="window.bpspat.api.completeInteractionWithDisp('100', 'Test Notes 12345')">Set Disposition 100 and Notes, Complete</button>
+	<p><button type="button" onclick="window.bpspat.api.stopScreenRecording()">Stop Screen Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.pauseScreenRecording()">Pause Screen Recording</button>
+	<p><button type="button" onclick="window.bpspat.api.resumeScreenRecording()">Resume Screen Recording</button>	
+</form>
+**************************************************
+<script>
+function testAlert() {
+a = 'Test OK! Script is supported!';
+alert(a);
+}
+</script>
+</body>
+</html>
