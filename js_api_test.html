@@ -13,7 +13,16 @@ or guguger.github.io/js_api_test.html
 -->
 <form>
 	<p><button type="button" onclick="testAlert()">Test Script support</button>
+</form>
+Agent Status Methods *********************************************
+<form>	
+	<p><button type "button" onclick="window.bpspat.api.setStatus('Not Ready', 'Lunch')"> Set Agent status with reason code as  Lunch </button> <!-- missing in external docs -->
+</form>
+
+<form>	
 	<p><button type="button" onclick="window.bpspat.api.dialNumber('8800555555')">Dial 8800555555</button>
+	
+	<p><button type "button" onclick="window.bpspat.api.selectService('Simple Call')"> Select Service 'Simple Call' </button> 
 	<p><button type="button" onclick="window.bpspat.api.startCallRecording()">Start Recording</button>
 	<p><button type="button" onclick="window.bpspat.api.muteCallRecording()">Mute Recording</button>	
 	<p><button type="button" onclick="window.bpspat.api.stopCallRecording()">Stop Recording</button>
@@ -26,11 +35,17 @@ or guguger.github.io/js_api_test.html
 	<p><button type="button" onclick="window.bpspat.api.stopScreenRecording()">Stop Screen Recording</button>
 	<p><button type="button" onclick="window.bpspat.api.pauseScreenRecording()">Pause Screen Recording</button>
 	<p><button type="button" onclick="window.bpspat.api.resumeScreenRecording()">Resume Screen Recording</button>
-       <p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Cat')">Set Reporting Custom Filed#1 as Cat</button>	
-	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Dog')">Set Reporting Custom Filed#1 as Dog</button>	
-	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Bird')">Set Reporting Custom Filed#1 as Bird</button>	
-	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#2', 'Cat')">Set Reporting Custom Filed#2 as Cat</button>	
-	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#2', 'Dog')">Set Reporting Custom Filed#2 as Dog </button>	   
+       <p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Cat')">Set Reporting Custom Field#1 as Cat</button>	
+	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Dog')">Set Reporting Custom Field#1 as Dog</button>	
+	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Bird')">Set Reporting Custom Field#1 as Bird</button>	
+	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#2', 'Cat')">Set Reporting Custom Field#2 as Cat</button>	
+	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#2', 'Dog')">Set Reporting Custom Field#2 as Dog </button>
+	<p><button type="button" onclick="window.bpspat.api.singleStepTransfer(8800555555)">Single Step Transfer </button>
+	<p><button type="button" onclick="window.bpspat.api.singleStepConference(8800555555)">Single Step Conference </button>
+	<p><button type="button" onclick="window.bpspat.api.postVariable(name,value)">Post Variable (Set Variable block is included into scenario) </button>
+	<p><button type="button" onclick="window.bpspat.api.terminateInteraction()">Terminate Interaction (releases the communication channel of the current interaction)</button>
+    <!-- bug #12228    <p><button type="button" onclick="window.bpspat.api.getFormValue('name1')">Custom Field1</button>
+        <p><button type="button" onclick="window.bpspat.api.setFormValue('name1', 'JScript')">Custom Field2</button>	-->
 </form>
 **************************************************
 <script>
