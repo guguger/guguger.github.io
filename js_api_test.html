@@ -27,10 +27,10 @@ or guguger.github.io/js_api_test.html
 ++++++ Completing Interaction   +++++++++++++++++++++++++++++++
 <form>
        <p><button type="button" onclick="window.bpspat.api.setNotes('Test Notes 12345')">Set Notes</button>
-	<p><button type="button" onclick="window.bpspat.api.setDisposition(1235468)">Set Disposition as Product sold by Code 100 (code added to disposition on service)</button>
+	<p><button type="button" onclick="window.bpspat.api.setDisposition('1235468')">Set Disposition as Product sold by Code 100 (code added to disposition on service)</button>
 	<p><button type="button" onclick="window.bpspat.api.setDispositionByName('Product sold')">Set Disposition as Product sold by Name</button>
 	<p><button type="button" onclick="window.bpspat.api.completeInteraction()">Complete</button>
-	<p><button type="button" onclick="window.bpspat.api.completeInteractionWithDisp(1235468, 'Test Notes 12345')">Set Disposition 'Product sold' by Code and Notes, Complete</button>
+	<p><button type="button" onclick="window.bpspat.api.completeInteractionWithDisp('1235468', 'Test Notes 12345')">Set Disposition 'Product sold' by Code and Notes, Complete</button>
       <p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Cat')">Set Reporting Custom Field#1 as Cat</button>	
 	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Dog')">Set Reporting Custom Field#1 as Dog</button>	
 	<p><button type="button" onclick="window.bpspat.api.setReportingCustomField('CustomReportingField#1', 'Bird')">Set Reporting Custom Field#1 as Bird</button>	
