@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!--___PRODUCT_BUILD___ (___PRODUCT_COMMENTS___) ___PRODUCT_DATE___-->
+
+<html>
+<head>
+ACTIVITY FORM TO OPEN
+</head>
+<body>
+
+
+<div id="blanket" style="display:none;"></div>
+    <div id="popUpDiv" style="display:none;">
+        <a href="#"  onclick="popup('popUpDiv')">
+        </a>
+<script type="text/javascript"> 
+    var popUpWindow;
+    function popup(n) {
+       popUpWindow = window.open(n);
+	   //  popUpWindow = window.open("",n, "height=500,width=500");
+    }
+                function foo(obj){
+                test1 = "http://guguger.github.io/bf/test.html?"+obj.innerHTML; 
+                popUpWindow.document.write('<iframe height="450" allowTransparency="true" frameborder="0" scrolling="yes" style="width:100%;" src="'+test1+'" type= "text/javascript"></iframe>');
+
+                } 
+        </script>
+</div>
+
+        <a href="#" onclick="popup('popUpDiv');foo(this);">OnSale</a>
+
+</body>
+</html>
