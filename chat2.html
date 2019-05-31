@@ -15,15 +15,27 @@ Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
 -->
 <link type="text/css" rel="stylesheet" href="https://olga-centos-vm.bugfocus.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
+3	               var callbacks = {
+4	                    weAreOnline: function() {console.log('weAreOnline');},
+5	                    weAreOffline: function() {console.log('weAreOffline');},
+6	                    windowCloseIconClicked: function() {console.log('windowCloseIconClicked');},
+7	                    preChatWindowPhoneButtonClicked: function() {console.log('preChatWindowPhoneButtonClicked');},
+8	                    preChatWindowChatButtonClicked: function() {console.log('preChatWindowChatButtonClicked');},
+9	                    preChatWindowCancelButtonClicked: function() {console.log('preChatWindowCancelButtonClicked');},
+10	                    reactiveChatButtonClicked: function() {console.log('reactiveChatButtonClicked');},
+11	                    proactiveYes: function() {console.log('proactiveYes');},
+12	                    proactiveNo: function() {console.log('proactiveNo');},
+13	                    proactiveChatOffered: function() {console.log('proactiveChatOffered');}
+14	            }; 
+
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: '1234',
         apiUrl: 'https://olga-centos-vm.bugfocus.com/clientweb/api/v1',
         tenantUrl: 'example.com',
         chatPath: 'https://olga-centos-vm.bugfocus.com/clientweb/chat-client-v4/',
-		togetherJS_enabled : true
+		togetherJS_enabled : true,
+		callbacks: callbacks
 	
-		
-
         /*        
          // Default customer data, it can be collected on current site's context
          first_name: '',
