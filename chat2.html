@@ -16,7 +16,9 @@ Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
 <link type="text/css" rel="stylesheet" href="https://olga-centos-vm.bugfocus.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
     var callbacks = {
-	proactiveYes: function() {console.log('proactiveYes');}
+	proactiveYes: function() {console.log('proactiveYes');},
+12	proactiveNo: function() {console.log('proactiveNo');},
+13	proactiveChatOffered: function() {console.log('proactiveChatOffered');}
 	};
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: '1234',
