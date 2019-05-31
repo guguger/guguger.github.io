@@ -16,9 +16,16 @@ Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
 <link type="text/css" rel="stylesheet" href="https://olga-centos-vm.bugfocus.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
     var callbacks = {
-	proactiveYes: function() {console.log('proactiveYes');},
-    proactiveNo: function() {console.log('proactiveNo');},
-    proactiveChatOffered: function() {console.log('proactiveChatOffered');}
+weAreOnline: function() {console.log('weAreOnline');},
+weAreOffline: function() {console.log('weAreOffline');},
+windowCloseIconClicked: function() {console.log('windowCloseIconClicked');},
+preChatWindowPhoneButtonClicked: function() {console.log('preChatWindowPhoneButtonClicked');},
+preChatWindowChatButtonClicked: function() {console.log('preChatWindowChatButtonClicked');},
+preChatWindowCancelButtonClicked: function() {console.log('preChatWindowCancelButtonClicked');},
+reactiveChatButtonClicked: function() {console.log('reactiveChatButtonClicked');},
+proactiveYes: function() {console.log('proactiveYes');},
+proactiveNo: function() {console.log('proactiveNo');},
+proactiveChatOffered: function() {console.log('proactiveChatOffered');}
 	};
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: '1234',
