@@ -13,11 +13,24 @@ Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
 -->
 <link type="text/css" rel="stylesheet" href="https://olga-540.bugfocus.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
+ var callbacks = {
+		weAreOnline: function() {console.log('weAreOnline');},
+		weAreOffline: function() {console.log('weAreOffline');},
+		windowCloseIconClicked: function() {console.log('windowCloseIconClicked');},
+		preChatWindowPhoneButtonClicked: function() {console.log('preChatWindowPhoneButtonClicked');},
+		preChatWindowChatButtonClicked: function() {console.log('preChatWindowChatButtonClicked');},
+		preChatWindowCancelButtonClicked: function() {console.log('preChatWindowCancelButtonClicked');},
+		reactiveChatButtonClicked: function() {console.log('reactiveChatButtonClicked');},
+		proactiveYes: function() {console.log('proactiveYes');},
+		proactiveNo: function() {console.log('proactiveNo');},
+		proactiveChatOffered: function() {console.log('proactiveChatOffered');}
+	};
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: 'e38c5c6a-bdab-400a-9dd6-280171655735',
         apiUrl: 'https://olga-540.bugfocus.com/clientweb/api/v1',
         tenantUrl: 'example.com',
-        chatPath: 'https://olga-540.bugfocus.com/clientweb/chat-client-v4/'
+        chatPath: 'https://olga-540.bugfocus.com/clientweb/chat-client-v4/',
+		callbacks: callbacks
 
         /*        
          // Default customer data, it can be collected on current site's context
