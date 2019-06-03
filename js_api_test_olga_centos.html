@@ -54,7 +54,8 @@ or guguger.github.io/js_api_test.html
 
 
 **************************************************
-<script>
+<script type="text/javascript">
+
 function testAlert() {
 a = 'Test OK! Script is supported!';
 alert(a);
@@ -63,6 +64,7 @@ callback = function(data) {
 data.recording = 1/0;
 data.muted = 1/0;
 data.paused = 1/0;
+console.log(data);
 }
 </script>
 </body>
