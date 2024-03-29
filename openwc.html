@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!--___PRODUCT_BUILD___ (___PRODUCT_COMMENTS___) ___PRODUCT_DATE___-->
+
+<html>
+<head>
+    <title>Chat Test Page</title>
+</head>
+<body>
+
+<!-- You have to put this piece of JavaScript code into your web page
+Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
+-->
+<link type="text/css" rel="stylesheet" href="https://open1.pl.bugfocus.com/clientweb/chat-client-v4/css/form.css">
+<script type="text/javascript">
+    SERVICE_PATTERN_CHAT_CONFIG = {
+        appId: 'aa315fb18b5f4b43b7d3ed42b67d19e5',
+        apiUrl: 'https://open1.pl.bugfocus.com/clientweb/api/v1',
+        tenantUrl: 'mobile2.bugfocus.com',
+        chatPath: 'https://open1.pl.bugfocus.com/clientweb/chat-client-v4/'
+    };
+</script>
+
+<script src="https://open1.pl.bugfocus.com/clientweb/chat-client-v4/js/init.js"></script> 
+ <div class="sp-callback-form" id="sp-callback-form">
+   <label>Request a callback</label>
+   <label> </label>
+   <label>Name:</label>
+   <input type="text" id="sp-callback-name" placeholder="Name" />
+   <label>Phone:</label>
+   <input type="tel" id="sp-callback-phone_number" placeholder="Phone" />
+   <button id="sp-callback-submit-inline">Request Call</button>
+</div>
+
+</body>
+</html>
