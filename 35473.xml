@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOftContinent>
+  <tContinent>
+    <sCode>AF</sCode>
+    <sName>Africa</sName>
+  </tContinent>
+  <tContinent>
+    <sCode>AN</sCode>
+    <sName>Antarctica</sName>
+  </tContinent>
+  <tContinent>
+    <sCode>AS</sCode>
+    <sName>Asia</sName>
+  </tContinent>
+  <tContinent>
+    <sCode>EU</sCode>
+    <sName>Europe</sName>
+  </tContinent>
+  <tContinent>
+    <sCode>OC</sCode>
+    <sName>Ocenania</sName>
+  </tContinent>
+  <tContinent>
+    <sCode>AM</sCode>
+    <sName>The Americas</sName>
+  </tContinent>
+</ArrayOftContinent>
